@@ -10,6 +10,7 @@ const screens = {
   appStack: 'AppStack',
   drawerStack: 'DrawerStack',
   bottomTabStack: 'BottomTabStack',
+  history: 'History',
 };
 
 export { screens };

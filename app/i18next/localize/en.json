@@ -71,6 +71,11 @@
     "recent_transactions": "Recent Transactions"
   },
 
+  "History": {
+    "History" : "History",
+    "Send_NFT" : "Send NFT"
+  },
+
   "Drawer": {
     "changeLanguage": "Change Language"
   },

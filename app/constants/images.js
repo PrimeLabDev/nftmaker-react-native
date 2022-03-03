@@ -14,6 +14,7 @@ const transaction_black = require('../assets/images/transaction_black.png');
 const transaction_in = require('../assets/images/transaction_in.png');
 const transaction_out = require('../assets/images/transaction_out.png');
 const modal_bg = require('../assets/images/modal_bg.png');
+const arrow = require('../assets/images/arrow.png');
 
 const images = {
   logo,
@@ -31,7 +32,8 @@ const images = {
   transaction_black,
   transaction_in,
   transaction_out,
-  modal_bg
+  modal_bg,
+  arrow
 };
 
 export { images };
