@@ -7,7 +7,6 @@ export default StyleSheet.create({
     cardWrapper: {
         backgroundColor: colors.transparent,
         paddingVertical: 10,
-        flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'flex-start',

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { TouchableOpacity, View } from 'react-native';
 import { tabIcons } from '../../helpers';
 import styles from './bottom-tab.styles';
-import {useRoute} from '@react-navigation/native';
+import { useRoute } from '@react-navigation/native';
 import { screens } from '../../config';
 
 function BottomTab(props) {
@@ -23,9 +23,10 @@ function BottomTab(props) {
         {props.isOpen ? tabIcons.plus_active : tabIcons.plus_disable}
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.tab}>
-        {route.name === 'Transaction' && !props.isOpen ? tabIcons.transaction_active : tabIcons.transaction_disable}
+      <TouchableOpacity style={styles.tab} onPress={() => props.navigation.navigate(screens.history)}>
+        {route.name === 'History' && !props.isOpen ? tabIcons.transaction_active : tabIcons.transaction_disable}
       </TouchableOpacity>
+
     </View>
   );
 }

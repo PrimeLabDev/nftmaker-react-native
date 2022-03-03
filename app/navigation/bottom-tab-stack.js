@@ -7,6 +7,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import { BottomTab, Touchable } from '../components';
 import { screens } from '../config';
 import { images } from '../constants';
+import History from '../screens/history';
 import Home from '../screens/home';
 import MyNFT from '../screens/my-nft';
 import { theme } from '../theme';
@@ -33,6 +34,7 @@ export default function TabNavigator(props) {
         barStyle={styles.barStyle}>
         <BottomTabStack.Screen name={screens.home} component={Home} />
         <BottomTabStack.Screen name={screens.myNFT} component={MyNFT} />
+        <BottomTabStack.Screen name={screens.history} component={History} />
       </BottomTabStack.Navigator>
       <Modal transparent statusBarTranslucent animationType="fade" visible={isOpen} onRequestClose={onClose} onDismiss={onClose}>
         <Touchable style={styles.modalBackdrop} onPress={onClose}>

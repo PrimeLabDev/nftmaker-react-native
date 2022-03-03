@@ -40,6 +40,6 @@ export const textStyle = {
   },
   heading: {
     fontSize: 18,
-    fontWeight: '800',
+    fontWeight: '600',
   },
 };
