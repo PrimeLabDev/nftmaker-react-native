@@ -1,0 +1,69 @@
+{
+  "OnBoarding": {
+    "description": "The easiest way to create NFTs and share them with others. Start minting NFTs in NEARApp’s rapidly expanding ecosystem.",
+    "title1": "NFT",
+    "title2": "Maker App",
+    "create_account": "Create an account",
+    "privacy_policy": "Privacy Policy",
+    "terms_service": "Terms of Service",
+    "copyright": "© 2022 Prime Lab.",
+    "about_us": "About Us",
+    "contact_us": "Contact Us",
+    "sign_in": "Sign in"
+  },
+
+  "SignIn": {
+    "phone": "Phone",
+    "email": "Email",
+    "temrs_privacy_text": "By clicking continue you must agree to NEAR Labs",
+    "and": "and",
+    "privacy_policy": "Privacy Policy",
+    "terms_service": "Terms & Conditions",
+    "already_account": "Already have a NEARApps Account?",
+    "login_with_NEARApps": "Login with NEARApps"
+  },
+
+  "Common": {
+    "continue": "Continue",
+    "see_all": "See all",
+    "my_nfts": "My NFTs",
+    "mint_nft": "Mint an NFT",
+    "digital_art": "Digital Art",
+    "sent_to": "Sent to",
+    "received_from": "Received from",
+    "mint": "Mint",
+    "send": "Send"
+  },
+
+  "Intro": {
+    "title1": "Title 1",
+    "description1": "Description 1",
+    "title2": "Title 2",
+    "description2": "Description 2",
+    "title3": "Title 3",
+    "description3": "Description 3",
+    "skip": "Skip"
+  },
+
+  "Home": {
+    "title": "Home",
+    "start_creating": "Start creating your",
+    "today": "today",
+    "recent_transactions": "Recent Transactions"
+  },
+
+  "Drawer": {
+    "changeLanguage": "Change Language"
+  },
+
+  "BottomTab": {
+    "search": "Search",
+    "home": "Home",
+    "profile": "Profile"
+  },
+
+  "Component": {
+    "continueWithFacebook": "Button",
+    "continueWithGoogle": "Button"
+  }
+}
