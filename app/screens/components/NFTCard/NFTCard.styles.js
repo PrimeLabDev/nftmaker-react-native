@@ -50,5 +50,16 @@ export default StyleSheet.create({
         fontSize: 14,
         color: colors.black,
         fontWeight: '600'
+    },
+    selected: {
+        borderColor: colors.primary,
+        shadowColor: colors.primary,
+    },
+    checkMark: {
+        position: 'absolute',
+        bottom: 28,
+        right: 21,
+        width: 22,
+        height: 22
     }
 });

@@ -1,6 +1,7 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import { withTheme } from 'react-native-paper';
+import { Touchable } from '..';
 import styles from './card.styles';
 
 function Card(props) {
@@ -9,9 +10,9 @@ function Card(props) {
         style = {...style, ...props.style};
     }
     return (
-        <View style={style} onPress={props.onPress} >
+        <Touchable style={style} onPress={props.onPress} >
             {props.children}
-        </View>
+        </Touchable>
     );
 }
 

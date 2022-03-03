@@ -42,5 +42,10 @@
   "Component": {
     "continueWithFacebook": "Continuer avec Facebook",
     "continueWithGoogle": "Continuer avec Google"
+  },
+  
+  "SendNFT": {
+    "title": "Envoyer NFT",
+    "description": "Sélectionnez un NFT que vous souhaitez envoyer"
   }
 }

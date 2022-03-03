@@ -4,7 +4,12 @@ import { theme } from '../../theme';
 const { colors } = theme;
 
 const styles = StyleSheet.create({
-  container: { flex: 1, marginTop: STATUSBAR_HEIGHT + 15 },
+  container: { 
+    flex: 1,
+    marginTop: STATUSBAR_HEIGHT + 15,
+    flexDirection: 'column',
+    justifyContent: 'flex-end'
+  },
   content: {
     flex: 1,
     backgroundColor: colors.background,

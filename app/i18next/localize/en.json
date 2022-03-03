@@ -40,6 +40,11 @@
     "terms_privacy_text": "By creating a NEARApps account, you agree to the NEARApps Wallet"
   },
 
+  "SendNFT": {
+    "title": "Send NFT",
+    "description": "Select an NFT you want to send"
+  },
+
   "Common": {
     "continue": "Continue",
     "see_all": "See all",

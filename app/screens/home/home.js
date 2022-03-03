@@ -4,6 +4,7 @@ import { View, ImageBackground, ScrollView } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import { withTheme } from 'react-native-paper';
 import { AppButton, AppHeader, Card, Text } from '../../components';
+import { screens } from '../../config';
 import { images, textStyle } from '../../constants';
 import { NFTCard, SectionHeader } from '../components';
 import TransactionCard from '../components/TransactionCard/TransactionCard';
@@ -99,19 +100,19 @@ const Home = (props) => {
           </Card>
         </View>
         <View style={styles.sectionWrapper}>
-          <SectionHeader title={i18('Common.my_nfts')} action={i18('Common.see_all')} onPress={() => { }} />
+          <SectionHeader style={{marginTop: 24}} title={i18('Common.my_nfts')} action={i18('Common.see_all')} onPress={() => props.navigation.navigate(screens.myNFT)} />
         </View>
         <ScrollView horizontal style={styles.horizontalScrollView}>
           {
             NFTs.map((item, index) => {
               return (
-                <NFTCard key={`nft_card_${index}`} style={styles.nftCard} data={item} />
+                <NFTCard key={`nft_card_${index}`} style={styles.nftCard} data={item} hasNavigate />
               )
             })
           }
         </ScrollView>
         <View style={styles.sectionWrapper}>
-          <SectionHeader title={i18('Home.recent_transactions')} action={i18('Common.see_all')} onPress={() => { }} />
+          <SectionHeader style={{marginTop: 24}} title={i18('Home.recent_transactions')} action={i18('Common.see_all')} onPress={() => props.navigation.navigate(screens.history)} />
         </View>
         <View style={styles.sectionWrapper}>
           {

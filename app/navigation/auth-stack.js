@@ -7,6 +7,7 @@ import Verification from '../screens/verification';
 import CreateNEARAccount from '../screens/create-NEAR-account';
 import WalkThrough from '../screens/walkthrough';
 import BottomTabStack from './bottom-tab-stack';
+import SendNFT from '../screens/send-nft';
 
 const AuthStack = createStackNavigator();
 
@@ -48,6 +49,7 @@ export default function AuthNavigator() {
       <AuthStack.Screen name={screens.createNEARAccount} component={CreateNEARAccount} options={modalScreenOptions} />
 
       <AuthStack.Screen name={screens.home} component={BottomTabStack} />
+      <AuthStack.Screen name={screens.sendNFT} component={SendNFT} options={modalScreenOptions} />
       <AuthStack.Screen name={screens.walkthrough} component={WalkThrough} />
     </AuthStack.Navigator>
   );

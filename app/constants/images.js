@@ -15,6 +15,9 @@ const transaction_in = require('../assets/images/transaction_in.png');
 const transaction_out = require('../assets/images/transaction_out.png');
 const modal_bg = require('../assets/images/modal_bg.png');
 const arrow = require('../assets/images/arrow.png');
+const check_mark = require('../assets/images/check_mark.png');
+const no_mark = require('../assets/images/no_mark.png');
+const search = require('../assets/images/search.png');
 
 const images = {
   logo,
@@ -33,7 +36,10 @@ const images = {
   transaction_in,
   transaction_out,
   modal_bg,
-  arrow
+  arrow,
+  check_mark,
+  no_mark,
+  search
 };
 
 export { images };

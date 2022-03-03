@@ -4,6 +4,7 @@ import { View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { withTheme } from 'react-native-paper';
 import { AppHeader } from '../../components';
+import { screens } from '../../config';
 import { images } from '../../constants';
 import { SectionHeader } from '../components';
 import { SelectionBar } from '../components/SelectionBar';
@@ -141,7 +142,7 @@ const History = (props) => {
         <View style={styles.container}>
             <AppHeader title={'john.near'} {...props} />
             <View style={styles.header}>
-                <SectionHeader title={i18('History.History')} action={i18('History.Send_NFT')} isActionWithImage={true} image={images.arrow} onPress={() => { }} />
+                <SectionHeader title={i18('History.History')} action={i18('History.Send_NFT')} isActionWithImage={true} image={images.arrow} onPress={() => props.navigation.navigate(screens.sendNFT)} />
             </View>
             <SelectionBar selectedTraIndex={selectedTraIndex} onPress={(index) => filterTranscationHistory(index)} />
             <View style={styles.sectionWrapper}>

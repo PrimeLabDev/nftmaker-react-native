@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { Text, IconButton } from '..';
 import styles from './modal-container.styles';
 
-function ModalContainer({ title, children, indicatorWidth, onPressBack }) {
+function ModalContainer({ title, children, indicatorWidth, onPressBack, style={} }) {
   return (
     <View style={styles.container}>
       <View>
@@ -14,7 +14,7 @@ function ModalContainer({ title, children, indicatorWidth, onPressBack }) {
           </View>
         </View>
       </View>
-      <View style={styles.content}>
+      <View style={{...styles.content, ...style}}>
         {indicatorWidth && <View style={[styles.indicator, { width: indicatorWidth }]} />}
         {children}
       </View>

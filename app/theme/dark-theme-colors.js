@@ -19,6 +19,7 @@ export default {
   gray7: '#808080',
   gray8: '#F9F9F9',
   gray9: '#CFCFCF',
+  gray10: '#EBEDF0',
   border: '#DEDEDE',
   dark: '#1F1F1F',
 };

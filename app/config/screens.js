@@ -11,6 +11,7 @@ const screens = {
   drawerStack: 'DrawerStack',
   bottomTabStack: 'BottomTabStack',
   history: 'History',
+  sendNFT: 'SendNFT'
 };
 
 export { screens };
