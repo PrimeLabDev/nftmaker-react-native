@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { Icon } from 'native-base';
 import { TextInput, View, Text } from 'react-native';
-import { withTheme } from 'react-native-paper';
+import { useTheme } from '@react-navigation/native';
 import styles from './input-text.styles';
-import { theme } from '../../theme';
 
-const { colors } = theme;
-
-const InputText = ({ label, hasInfoIcon, ...props }) => {
+const InputText = ({ label, hasInfoIcon, rightComponent, ...props }) => {
+  const { colors } = useTheme();
   const [isFocused, setIsFocused] = useState(false);
   return (
     <View>
@@ -17,15 +15,20 @@ const InputText = ({ label, hasInfoIcon, ...props }) => {
           {hasInfoIcon && <Icon name="info-circle" type="FontAwesome5" style={styles.icon} />}
         </View>
       )}
-      <TextInput
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
-        style={[styles.input, isFocused && { borderColor: colors.primary }]}
-        placeholderTextColor={colors.gray5}
-        {...props}
-      />
+      <View style={styles.inputRow}>
+        <View style={styles.inputContainer}>
+          <TextInput
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setIsFocused(false)}
+            style={[styles.input, isFocused && { borderColor: colors.primary }]}
+            placeholderTextColor={colors.gray5}
+            {...props}
+          />
+        </View>
+        {rightComponent}
+      </View>
     </View>
   );
 };
 
-export default withTheme(InputText);
+export default InputText;

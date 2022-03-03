@@ -1,7 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
 import { Icon } from 'native-base';
-import { withTheme } from 'react-native-paper';
 import { Touchable } from '..';
 import styles from './icon.styles';
 
@@ -15,4 +14,4 @@ function IconButton({ name, type, style, iconStyle, onPress }) {
   );
 }
 
-export default withTheme(IconButton);
+export default IconButton;

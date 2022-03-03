@@ -9,14 +9,8 @@ const styles = StyleSheet.create({
     marginBottom: 11,
   },
   input: {
-    backgroundColor: colors.gray8,
     color: colors.gray7,
     fontSize: 16,
-    paddingVertical: 16,
-    paddingHorizontal: 18,
-    borderWidth: 1,
-    borderColor: colors.gray9,
-    borderRadius: 8,
   },
   iconRow: {
     flexDirection: 'row',
@@ -27,6 +21,19 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     color: colors.gray7,
     top: -5,
+  },
+  inputRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: colors.gray8,
+    borderWidth: 1,
+    borderColor: colors.gray9,
+    borderRadius: 8,
+  },
+  inputContainer: {
+    flex: 1,
+    paddingVertical: 16,
+    paddingHorizontal: 18,
   },
 });
 

@@ -1,25 +1,31 @@
+/* eslint-disable no-shadow */
 import React, { useState } from 'react';
 import { ImageBackground, View, StatusBar } from 'react-native';
 import { Content } from 'native-base';
 import { useTranslation } from 'react-i18next';
-import { withTheme } from 'react-native-paper';
 import FastImage from 'react-native-fast-image';
+import { useTheme } from '@react-navigation/native';
 import styles from './signin.styles';
 import { images } from '../../constants';
-import { AppButton, Touchable, Text, InputText } from '../../components';
+import { AppButton, Touchable, Text, InputText, MobileInputText } from '../../components';
 import { screens } from '../../config';
 
 const SignIn = (props) => {
+  const { colors } = useTheme();
   const [t] = useTranslation();
   const [tab, setTab] = useState('PHONE');
-  
-  const goToHome = () => {
-    props.navigation.navigate(screens.home);
+  const [iso2, setIso2] = useState('us');
+  const [dialCode, setDialCode] = useState('+1');
+  const [mobile, setMobile] = useState('');
+  const [email, setEmail] = useState('');
+
+  const goToVerification = () => {
+    props.navigation.navigate(screens.verification, { signInWith: tab, dialCode, mobile, email });
   };
-  
+
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="light-content" translucent />
+      <StatusBar barStyle="light-content" translucent backgroundColor={colors.black} />
       <View style={styles.topContainer}>
         <ImageBackground source={images.background} resizeMode="cover" style={styles.backgroundImage}>
           <FastImage source={images.logo} style={styles.logoImage} resizeMode="contain" />
@@ -38,13 +44,26 @@ const SignIn = (props) => {
         </View>
         <View style={styles.inputContainer}>
           {tab === 'EMAIL' ? (
-            <InputText placeholder={'Ex. johdoe@gmail.com'} keyboardType="email-address" />
+            <InputText
+              placeholder={'Ex. johdoe@gmail.com'}
+              value={email}
+              onChangeText={setEmail}
+              keyboardType="email-address"
+            />
           ) : (
-            <InputText keyboardType="number-pad" />
+            <MobileInputText
+              iso2={iso2}
+              dialCode={dialCode}
+              onChangeText={setMobile}
+              onSelectCountry={(iso2, dialCode) => {
+                setIso2(iso2);
+                setDialCode(dialCode);
+              }}
+            />
           )}
         </View>
         <View style={styles.buttonContainer}>
-          <AppButton hasNavigate onSubmit={goToHome} title={t('Common.continue')} />
+          <AppButton hasNavigate onSubmit={goToVerification} title={t('Common.continue')} />
         </View>
         <Text style={styles.descriptionText}>
           {t('SignIn.temrs_privacy_text')} <Text style={styles.highlight}>{t('SignIn.terms_service')}</Text>{' '}
@@ -57,4 +76,4 @@ const SignIn = (props) => {
     </View>
   );
 };
-export default withTheme(SignIn);
+export default SignIn;
