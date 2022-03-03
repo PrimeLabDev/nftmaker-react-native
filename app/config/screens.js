@@ -1,6 +1,8 @@
 const screens = {
   onboarding: 'OnBoarding',
   signin: 'SignIn',
+  verification: 'Verification',
+  createNEARAccount: 'CreateNEARAccount',
   walkthrough: 'WalkThrough',
   home: 'Home',
   myNFT: 'myNFT',
