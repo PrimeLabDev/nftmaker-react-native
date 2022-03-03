@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import { ImageBackground, SafeAreaView, View, StatusBar, Modal } from 'react-native';
 import { Icon } from 'native-base';
 import { useTranslation } from 'react-i18next';
-import { withTheme } from 'react-native-paper';
 import FastImage from 'react-native-fast-image';
+import { useTheme } from '@react-navigation/native';
 import styles from './onboarding.styles';
 import { images } from '../../constants';
 import { AppButton, Touchable, Text, IconButton } from '../../components';
 import { screens } from '../../config';
 
 const OnBoarding = (props) => {
+  const { colors } = useTheme();
   const [t] = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +24,7 @@ const OnBoarding = (props) => {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="light-content" translucent />
+      <StatusBar barStyle="light-content" translucent backgroundColor={colors.black} />
       <View style={styles.topContainer}>
         <ImageBackground source={images.background} style={styles.backgroundImage} />
         <View style={styles.topContent}>
@@ -75,4 +76,4 @@ const OnBoarding = (props) => {
     </View>
   );
 };
-export default withTheme(OnBoarding);
+export default OnBoarding;

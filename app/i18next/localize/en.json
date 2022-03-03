@@ -23,6 +23,23 @@
     "login_with_NEARApps": "Login with NEARApps"
   },
 
+  "Verification": {
+    "title": "Verification",
+    "email_description": "We've sent a 6-digit verification code to the email address",
+    "phone_description": "We've sent a 6-digit verification code to your phone",
+    "enter_verification_code": "Enter verification code",
+    "didnot_receive_code": "Didn't receive your code?",
+    "send_to_different_email": "Send to a different email address",
+    "send_to_different_phone": "Send to a different phone number",
+    "resend_code": "Resend your code"
+  },
+
+  "CreateNEARAppsAccount": {
+    "title": "Create NEARApps Account",
+    "description": "Enter an Account ID to use with your NEAR account. Your Account ID will be used for all NEAR operations, including sending and receiving assets.",
+    "terms_privacy_text": "By creating a NEARApps account, you agree to the NEARApps Wallet"
+  },
+
   "Common": {
     "continue": "Continue",
     "see_all": "See all",
@@ -32,7 +49,9 @@
     "sent_to": "Sent to",
     "received_from": "Received from",
     "mint": "Mint",
-    "send": "Send"
+    "send": "Send",
+    "full_name": "FULL NAME",
+    "account_id": "ACCOUNT ID"
   },
 
   "Intro": {
