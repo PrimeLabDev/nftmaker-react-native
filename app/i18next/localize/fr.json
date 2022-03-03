@@ -27,6 +27,10 @@
     "today": "today",
     "recent_transactions": "Transactions récentes"
   },
+  "History": {
+    "History" : "Histoire",
+    "Send_NFT" : "Envoyer NFT"
+  },
   "Drawer": {
     "changeLanguage": "Changer de langue"
   },
